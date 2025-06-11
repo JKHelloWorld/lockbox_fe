@@ -1,0 +1,20 @@
+.file-size-error-msg {
+    opacity: 1;
+}
+
+@keyframes fileSizeErrorMsgFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.file-size-error-msg-fade-out {
+    animation-name: fileSizeErrorMsgFadeOut;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,54 @@
+{
+  "commons": {
+    "errors": {
+      "required": "This field is required"
+    },
+    "buttons": {
+      "go_home": "Home"
+    }
+  },
+  "components": {
+    "upload_file": {
+      "max_size": "File must be 1MB or less",
+      "upload_file_max_size": "Max file size: {{maxSize}} MB",
+      "upload_file_max_size_error": "File size exceeds the allowed limit",
+      "only_lb_file": "Only .lb file"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "LockBox",
+      "lock_file": "Lock File",
+      "unlock_file": "Unlock File",
+      "slogan": "Set It. Lock It. Share It.",
+      "sub_slogan": "Your File, Your Timeline: Set the Date. Lock with Military‑Grade Encryption. Share with Confidence.",
+      "disclaimer": "We don't store your files"
+    },
+    "lock": {
+      "title": "Lock File",
+      "expiration_datetime": "Expiration date",
+      "expiration_datetime_error": "Invalid expiration date",
+      "submit": "Lock",
+      "lock_new_file_btn_label": "Lock a new file",
+      "share_lb": "Share this file with anyone you want"
+    },
+    "unlock": {
+      "title": "Unlock File",
+      "secret_label": "Secret",
+      "placeholder": "Secret key (no spaces)",
+      "submit": "Unlock",
+      "secret_placeholder": "Secret",
+      "unlock_new_file_btn_label": "Unlock a new file"
+    }
+  },
+  "server_errors": {
+    "WRONG_PASSWORD": "The password is incorrect",
+    "INVALID_LOCKBOX_FORMAT": "Invalid lockbox format",
+    "INTEGRITY_CHECK_FAILED": "Integrity check failed",
+    "NOT_YET_EXPIRED": "The file has not expired yet",
+    "DECRYPTION_FAILED": "Decryption failed",
+    "FILE_SIZE_EXCEEDED": "File size exceeded",
+    "EXPIRY_DATE_MUST_NOT_BE_IN_PAST": "Expiration date must not be in the past",
+    "UNKNOW": "An unknown error occurred"
+  }
+}
