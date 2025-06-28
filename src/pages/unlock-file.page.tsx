@@ -121,7 +121,7 @@ export default function UnlockFilePage() {
   };
 
   return (
-    <div className="flex m-auto min-w-[90vw] sm:min-w-[40vw] min-h-[50vh] shadow-md border border-gray-300 rounded-lg p-2">
+    <div className="flex m-auto w-[90vw] sm:min-w-[40vw] min-h-[50vh] shadow-md border border-gray-300 rounded-lg p-2">
       <VStack
         className="grow"
         alignItems="stretch"
