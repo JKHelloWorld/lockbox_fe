@@ -45,7 +45,7 @@ function App() {
               "flex justify-center items-center border-b border-gray-300 py-4 relative"
             }
           >
-            <Stack className="absolute left-[90%]" spacing={4}>
+            <Stack className="absolute top-[20%] sm:top-auto left-[75%] sm:left-[90%]" spacing={4}>
               <icons.lightTheme
                 className={`${isDark() ? "visible" : "invisible"} text-2xl`}
               ></icons.lightTheme>

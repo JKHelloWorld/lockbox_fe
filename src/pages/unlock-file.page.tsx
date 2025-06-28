@@ -121,7 +121,7 @@ export default function UnlockFilePage() {
   };
 
   return (
-    <div className="flex m-auto min-w-[40vw] min-h-[50vh] shadow-md border border-gray-300 rounded-lg p-2">
+    <div className="flex m-auto min-w-[90vw] sm:min-w-[40vw] min-h-[50vh] shadow-md border border-gray-300 rounded-lg p-2">
       <VStack
         className="grow"
         alignItems="stretch"
@@ -129,7 +129,7 @@ export default function UnlockFilePage() {
         divider={<Divider />}
       >
         <div className="flex items-center justify-center relative mt-6">
-          <div className="absolute right-[85%]">
+          <div className="absolute right-[80%] md:right-[85%]">
             <Button
               type="button"
               appearance="default"
