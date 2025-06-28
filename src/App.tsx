@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   CustomProvider,
   Heading,
@@ -32,6 +32,10 @@ function App() {
     }
   };
 
+  const isDark = (): boolean => {
+    return theme === "dark";
+  };
+
   return (
     <CustomProvider theme={theme}>
       <div className="h-screen w-screen flex justify-center">
@@ -42,17 +46,16 @@ function App() {
             }
           >
             <Stack className="absolute left-[90%]" spacing={4}>
-              <Toggle onChange={onToggleTheme}></Toggle>
-              {theme === "light" && (
-                <>
-                  <icons.lightTheme className="text-2xl"></icons.lightTheme>
-                </>
-              )}
-              {theme === "dark" && (
-                <>
-                  <icons.darkTheme className="text-2xl"></icons.darkTheme>
-                </>
-              )}
+              <icons.lightTheme
+                className={`${isDark() ? "visible" : "invisible"} text-2xl`}
+              ></icons.lightTheme>
+              <Toggle
+                checked={theme === "dark"}
+                onChange={onToggleTheme}
+              ></Toggle>
+              <icons.darkTheme
+                className={`${isDark() ? "invisible" : "visible"} text-2xl`}
+              ></icons.darkTheme>
             </Stack>
             <HeadingGroup className="text-center">
               <Heading level={2}>{t("pages.home.title")}</Heading>
