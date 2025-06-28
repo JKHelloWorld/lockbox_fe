@@ -137,7 +137,7 @@ export default function LockFilePage() {
   };
 
   return (
-    <div className="flex m-auto w-[90vw] sm:min-w-[40vw] min-h-[50vh] shadow-md border border-gray-300 rounded-lg p-2">
+    <div className="flex m-auto w-[90vw] sm:w-[40vw] min-h-[50vh] shadow-md border border-gray-300 rounded-lg p-2">
       <VStack
         className="grow"
         alignItems="stretch"
@@ -175,7 +175,8 @@ export default function LockFilePage() {
                       }
                     />
                   </Stack.Item>
-                  <VStack alignItems="stretch" className="mx-8" spacing={36}>
+                  <div className="sm:hidden mx-1"></div>
+                  <VStack alignItems="stretch" spacing={36}>
                     <Controller
                       name="expiryDate"
                       control={form.control}
@@ -250,6 +251,7 @@ export default function LockFilePage() {
                       )}
                     />
                   </VStack>
+                  <div className="hidden sm:inline mx-4"></div>
                 </Stack>
               </VStack.Item>
             </>
