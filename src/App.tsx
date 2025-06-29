@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import {
   CustomProvider,
   Heading,
@@ -21,7 +21,7 @@ const EMAIL = "9eoclzhztv8zyld@tutamail.com";
 type Theme = "light" | "dark" | "high-contrast" | undefined;
 
 function App() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
   const { t } = useTranslation();
 
   const onToggleTheme = (): void => {
@@ -36,27 +36,32 @@ function App() {
     return theme === "dark";
   };
 
+  const themeToggle = (): JSX.Element => {
+    return (
+      <Stack spacing={4}>
+        <icons.lightTheme
+          className={`${isDark() ? "visible" : "invisible"} text-2xl`}
+        ></icons.lightTheme>
+        <Toggle checked={theme === "dark"} onChange={onToggleTheme}></Toggle>
+        <icons.darkTheme
+          className={`${isDark() ? "invisible" : "visible"} text-2xl`}
+        ></icons.darkTheme>
+      </Stack>
+    );
+  };
+
   return (
     <CustomProvider theme={theme}>
-      <div className="h-screen w-screen flex justify-center">
+      <div className="relative h-screen w-screen flex justify-center">
         <VStack className={"w-full"} alignItems="stretch">
           <div
             className={
               "flex justify-center items-center border-b border-gray-300 py-4 relative"
             }
           >
-            <Stack className="absolute top-[620%] sm:top-auto left-[75%] sm:left-[90%]" spacing={4}>
-              <icons.lightTheme
-                className={`${isDark() ? "visible" : "invisible"} text-2xl`}
-              ></icons.lightTheme>
-              <Toggle
-                checked={theme === "dark"}
-                onChange={onToggleTheme}
-              ></Toggle>
-              <icons.darkTheme
-                className={`${isDark() ? "invisible" : "visible"} text-2xl`}
-              ></icons.darkTheme>
-            </Stack>
+            <span className="absolute top-[89vh] sm:top-auto left-[40vw] sm:left-[90vw]">
+              {themeToggle()}
+            </span>
             <HeadingGroup className="text-center">
               <Heading level={2}>{t("pages.home.title")}</Heading>
               <Text muted as="i">

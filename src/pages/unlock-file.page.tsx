@@ -189,7 +189,7 @@ export default function UnlockFilePage() {
                     />
                   </VStack>
                 </Stack>
-                <div className="hidden sm:inline mx-4"></div>
+                <div className="hidden sm:block mx-4"></div>
               </VStack.Item>
             </>
           )}

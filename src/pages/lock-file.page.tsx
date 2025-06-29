@@ -251,7 +251,7 @@ export default function LockFilePage() {
                       )}
                     />
                   </VStack>
-                  <div className="hidden sm:inline mx-4"></div>
+                  <div className="hidden sm:block mx-4"></div>
                 </Stack>
               </VStack.Item>
             </>
