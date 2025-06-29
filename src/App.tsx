@@ -59,7 +59,7 @@ function App() {
               "flex justify-center items-center border-b border-gray-300 py-4 relative"
             }
           >
-            <span className="absolute top-[89vh] sm:top-auto left-[40vw] sm:left-[90vw]">
+            <span className="absolute top-[20%] md:top-[24%] left-[10%] ">
               {themeToggle()}
             </span>
             <HeadingGroup className="text-center">
